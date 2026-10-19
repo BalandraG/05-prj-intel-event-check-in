@@ -1,4 +1,17 @@
-/* Modern reset */
+/* ==========================================================
+   Intel Sustainability Summit Check-In
+   Dark Intel theme (navy backgrounds with blue/cyan accents)
+   ========================================================== */
+
+/* Main colors used on this page:
+   #02050b  darkest background
+   #050b16  dark panel background
+   #071d49  navy card background
+   #0077ff  Intel blue (buttons)
+   #00c7fd  Intel cyan (highlights)
+   #d8e0eb  light text */
+
+/* General */
 * {
   margin: 0;
   padding: 0;
@@ -6,150 +19,11 @@
 }
 
 body {
-  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #02050b;
+  color: #d8e0eb;
   line-height: 1.6;
   min-height: 100vh;
-}
-
-/* Add form label styling */
-.form-label {
-  display: block;
-  text-align: left;
-  margin-bottom: 15px;
-  color: #475569;
-  padding-left: 5px;
-  font-weight: 500;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(
-      135deg,
-      rgba(0, 153, 219, 0.9) 0%,
-      rgba(0, 104, 181, 0.9) 50%,
-      rgba(0, 60, 116, 0.9) 100%
-    ),
-    url("img/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 60px 32px;
-  color: #fff;
-  margin-bottom: 34px;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.intel-logo {
-  max-width: 100px;
-  margin-bottom: 25px;
-  filter: brightness(0) invert(1);
-}
-
-.hero h1 {
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  letter-spacing: -0.5px;
-  color: white;
-}
-
-.hero-divider {
-  width: 100px;
-  height: 3px;
-  margin: 26px auto;
-  background-color: #00c7fd;
-}
-
-.hero p {
-  font-size: 22px;
-  letter-spacing: 1px;
-  font-weight: 300;
-  color: white;
-}
-
-/* Main container */
-.container {
-  max-width: 700px;
-  width: 90%;
-  margin: 0 auto 20px;
-  padding: 26px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 5px 24px rgba(0, 60, 116, 0.07);
-  text-align: center;
-}
-
-/* Check-in form */
-.check-in {
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #f8fafc;
-  border-radius: 16px;
-  text-align: center;
-}
-
-.form-group {
-  display: flex;
-  gap: 15px;
-  width: 100%;
-}
-
-/* Form elements */
-input {
-  flex: 1;
-  padding: 16px 20px;
-  border: 2px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  font-size: 17px;
-  font-weight: 500;
-  background: white;
-  color: #2c3e50;
-  transition: all 0.3s ease;
-  outline: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-
-input:focus {
-  border-color: #0071c5;
-  box-shadow: 0 0 0 4px rgba(0, 113, 197, 0.15);
-}
-
-button {
-  background-color: #0071c5;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 0 28px;
-  min-width: 160px;
-  height: 56px;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 113, 197, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button:hover {
-  background-color: #005a9e;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 113, 197, 0.3);
-}
-
-#checkInBtn {
-  flex-shrink: 0;
-  white-space: nowrap;
 }
 
 /* Icon spacing */
@@ -157,33 +31,199 @@ button:hover {
   margin-right: 8px;
 }
 
-button .fas {
-  font-size: 18px;
-  margin-right: 10px;
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 75vh;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 199, 253, 0.35);
+  box-shadow: inset 0 -90px 100px -80px rgba(0, 199, 253, 0.35);
+  background-color: #050b16;
+  /* Layered backgrounds: a faint grid on top of a navy gradient */
+  background-image:
+    linear-gradient(180deg, transparent 78%, rgba(2, 5, 11, 0.9) 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 199, 253, 0.035) 0,
+      rgba(0, 199, 253, 0.035) 1px,
+      transparent 1px,
+      transparent 96px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 119, 255, 0.03) 0,
+      rgba(0, 119, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 96px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 119, 255, 0.14),
+      transparent 24%,
+      transparent 76%,
+      rgba(0, 199, 253, 0.1)
+    ),
+    linear-gradient(180deg, #071d49 0%, #050b16 56%, #02050b 100%);
 }
 
-.attendance-header i {
-  font-size: 22px;
-  margin-right: 8px;
+/* Two tilted outline shapes for decoration */
+.hero::before,
+.hero::after {
+  position: absolute;
+  content: "";
+  border: 1px solid rgba(0, 199, 253, 0.16);
+  transform: rotate(-18deg);
 }
 
-/* Attendance section spacing */
-.attendance-header {
+.hero::before {
+  top: 14%;
+  left: -8%;
+  width: 38%;
+  height: 28%;
+  box-shadow: 0 0 55px rgba(0, 119, 255, 0.12);
+}
+
+.hero::after {
+  right: -10%;
+  bottom: 12%;
+  width: 42%;
+  height: 30%;
+  border-color: rgba(0, 119, 255, 0.14);
+  transform: rotate(18deg);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
   display: flex;
+  min-height: 75vh;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  margin-bottom: 15px;
-  font-size: 17px;
-  color: #64748b;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
 }
 
-/* Attendance tracker styling */
+/* Turn the logo white so it shows on the dark background */
+.intel-logo {
+  width: 200px;
+  max-width: 60vw;
+  height: auto;
+  margin-bottom: 2.5rem;
+  filter: brightness(0) invert(1);
+  animation: hero-fade-in 0.8s ease-out both;
+}
+
+.hero h1 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  line-height: 1.05;
+  animation: hero-fade-in 0.8s 0.2s ease-out both;
+}
+
+.title-main {
+  color: white;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title-sub {
+  margin-top: 0.4rem;
+  color: #d8e0eb;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: normal;
+}
+
+.hero-text {
+  max-width: 650px;
+  color: #c4cfdd;
+  font-size: 1.1rem;
+  animation: hero-fade-in 0.8s 0.4s ease-out both;
+}
+
+.hero-text .fas {
+  color: #00c7fd;
+}
+
+/* "Check in below" hint with a glowing line */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  color: #00c7fd;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: hero-fade-in 0.8s 0.6s ease-out both;
+}
+
+.scroll-line {
+  display: block;
+  width: 2px;
+  height: 32px;
+  margin: 0.7rem auto 0;
+  background-color: #00c7fd;
+  box-shadow: 0 0 10px rgba(0, 199, 253, 0.8);
+  animation: scroll-line-pulse 2.8s ease-in-out 1s infinite;
+}
+
+/* ---------- Animations ---------- */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-line-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(4px);
+  }
+}
+
+/* ---------- Main check-in area ---------- */
+/* Same faint grid as the hero, so the page feels connected */
+.checkin-section {
+  padding: 3.5rem 0 4rem;
+  background-color: #02050b;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 199, 253, 0.035) 0,
+      rgba(0, 199, 253, 0.035) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 119, 255, 0.03) 0,
+      rgba(0, 119, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    linear-gradient(180deg, #02050b, #071d49 50%, #02050b);
+}
+
+/* ---------- Attendance tracker ---------- */
 .attendance-tracker {
   max-width: 700px;
   width: 90%;
-  margin: 0 auto 40px;
-  padding: 0 20px;
+  margin: 0 auto 2.5rem;
   text-align: center;
 }
 
@@ -193,192 +233,450 @@ button .fas {
   justify-content: center;
   gap: 6px;
   margin-bottom: 15px;
-  font-size: 17px;
-  color: #64748b;
-}
-
-#attendeeCount {
-  color: #0071c5;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 2px;
+  color: #d8e0eb;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
 }
 
 .attendance-header i {
-  color: #0071c5;
+  color: #00c7fd;
   font-size: 20px;
   margin-right: 4px;
 }
 
-/* Max attendees text */
-.attendance-header span:last-child {
-  color: #64748b;
-  font-size: 17px;
-}
-
-/* Progress container - simplified */
-.progress-container {
-  width: 100%;
-  max-width: 500px;
-  height: 16px;
-  background-color: #e0e0e0;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 8px auto;
-  position: relative;
-}
-
-.progress-bar {
-  width: 0%;
-  height: 100%;
-  background-color: #0071c5;
-  background-image: linear-gradient(90deg, #0071c5, #00aeef);
-  border-radius: 10px;
-  transition: width 0.6s ease;
-}
-
-/* Adjust spacing between components */
-.container {
-  margin-top: 0;
-}
-
-/* Messages */
-#greeting {
-  font-weight: 500;
-  font-size: 18px;
-  padding: 16px 20px;
-  border-radius: 8px;
-  color: #333;
-  margin-bottom: 15px;
-  display: none;
-}
-
-.success-message {
-  background-color: #e8f4fc;
-  color: #003c71;
-}
-
-/* Counter */
 #attendeeCount {
-  color: #0071c5;
-  font-size: 24px;
-  font-weight: 700;
+  color: #00c7fd;
+  font-size: 1.8rem;
+  font-weight: bold;
   margin: 0 2px;
 }
 
-/* Footer */
-.footer {
+/* Progress bar track */
+.progress-container {
+  width: 100%;
+  max-width: 500px;
+  height: 14px;
+  margin: 8px auto;
+  overflow: hidden;
+  background-color: #050b16;
+  border: 1px solid rgba(0, 199, 253, 0.3);
+  border-radius: 10px;
+}
+
+/* Progress bar fill (its width is set by script.js) */
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #0077ff, #00c7fd);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 199, 253, 0.6);
+  transition: width 0.6s ease;
+}
+
+/* ---------- Main panel ---------- */
+.container {
+  max-width: 760px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-  padding: 40px 20px;
-  color: #94a3b8;
-  font-size: 14px;
+  background-color: #050b16;
+  border: 1px solid rgba(0, 119, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 35px rgba(0, 119, 255, 0.12);
 }
 
-.footer-link {
-  color: #64748b;
-  text-decoration: none;
+/* ---------- Greeting message ---------- */
+#greeting {
+  display: none;
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  color: #d8e0eb;
+  font-size: 1.05rem;
+  background-color: #02050b;
+  border: 1px solid rgba(0, 199, 253, 0.3);
+  border-radius: 4px;
+  overflow-wrap: anywhere;
 }
 
-.footer-link:hover {
-  color: #0071c5;
-  text-decoration: underline;
+.success-message {
+  color: white;
+  background-color: rgba(0, 119, 255, 0.2) !important;
+  border-color: #00c7fd !important;
+  box-shadow: 0 0 18px rgba(0, 199, 253, 0.2);
 }
 
-/* Input wrapper for name and team select */
+/* Give the attendance milestone more room than a normal greeting. */
+#greeting.celebration-message {
+  padding: 2.5rem 1.75rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  line-height: 1.5;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 119, 255, 0.25),
+    rgba(0, 199, 253, 0.1)
+  );
+  box-shadow: 0 0 30px rgba(0, 199, 253, 0.25);
+}
+
+#greeting.celebration-message::before {
+  content: "\1F3C6";
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+/* ---------- Check-in form ---------- */
+.check-in {
+  padding: 1.5rem;
+  background-color: rgba(7, 29, 73, 0.94);
+  border: 1px solid rgba(0, 199, 253, 0.25);
+  border-radius: 8px;
+  box-shadow:
+    0 0 18px rgba(0, 119, 255, 0.12),
+    0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Name box and team dropdown sit side by side */
 .input-wrapper {
   flex: 1;
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  min-width: 0;
+}
+
+input,
+select {
+  min-height: 3rem;
+  padding: 0.6rem 1rem;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #02050b;
+  border: 1px solid rgba(0, 199, 253, 0.45);
+  border-radius: 4px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input {
+  flex: 1;
   min-width: 0;
 }
 
 select {
-  padding: 16px;
-  border: 2px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  font-size: 17px;
-  font-weight: 500;
-  background: white;
-  color: #2c3e50;
+  min-width: 170px;
   cursor: pointer;
-  min-width: 140px;
 }
 
-/* Team Stats */
-.team-stats {
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 2px solid #f1f5f9;
+/* Keep the dropdown list readable on Windows */
+select option {
+  color: white;
+  background-color: #050b16;
 }
 
-.team-stats h3 {
-  color: #64748b;
-  font-size: 16px;
-  margin-bottom: 20px;
+input::placeholder {
+  color: #aeb9c8;
+  opacity: 1;
 }
 
+input:focus,
+select:focus {
+  border-color: #00c7fd;
+  box-shadow: 0 0 0 0.2rem rgba(0, 199, 253, 0.25);
+}
+
+/* ---------- Buttons ---------- */
+/* Main button (Check In) */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0077ff;
+  border: 1px solid #00c7fd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+button:hover {
+  color: #02050b;
+  background-color: #00c7fd;
+}
+
+button:focus-visible {
+  outline: 2px solid #00c7fd;
+  outline-offset: 3px;
+}
+
+#checkInBtn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Reset button: quieter outlined style */
+.reset-btn {
+  margin: 2rem auto 0;
+  color: #d8e0eb;
+  font-weight: normal;
+  background-color: rgba(0, 119, 255, 0.2);
+}
+
+.reset-btn:hover {
+  color: white;
+  background-color: #0077ff;
+}
+
+/* ---------- Section headings ---------- */
+.team-stats,
+.attendee-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 119, 255, 0.35);
+}
+
+.team-stats h3,
+.attendee-section h3 {
+  margin-bottom: 1.25rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+/* ---------- Team cards ---------- */
 .teams-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 15px;
 }
 
 .team-card {
-  padding: 15px;
-  border-radius: 12px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.25rem;
+  padding: 1.25rem 1rem;
+  background-color: rgba(7, 29, 73, 0.94);
+  border: 1px solid rgba(0, 199, 253, 0.25);
+  border-radius: 8px;
+  box-shadow:
+    0 0 18px rgba(0, 119, 255, 0.12),
+    0 12px 28px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* Team card colors */
-.team-card.water {
-  background-color: #e8f7fc;
-}
-.team-card.zero {
-  background-color: #ecfdf3;
-}
-.team-card.power {
-  background-color: #fff7ed;
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 199, 253, 0.55);
+  box-shadow:
+    0 0 24px rgba(0, 119, 255, 0.22),
+    0 14px 30px rgba(0, 0, 0, 0.35);
 }
 
 .team-name {
-  font-size: 15px;
-  font-weight: 500;
-  color: #475569;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-/* Mobile responsive */
+/* Big cyan numbers, like the years on the timeline */
+.team-count {
+  color: #00c7fd;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+/* ---------- Attendee list ---------- */
+#attendeeListEmpty {
+  color: #b8c1cc;
+  font-size: 0.95rem;
+}
+
+.attendee-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.attendee-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0.75rem 1rem;
+  background-color: #02050b;
+  border: 1px solid rgba(0, 199, 253, 0.25);
+  border-left: 3px solid #00c7fd;
+  border-radius: 4px;
+}
+
+.attendee-name,
+.attendee-team {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.attendee-name {
+  color: white;
+  font-weight: bold;
+}
+
+.attendee-team {
+  color: #b8c1cc;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.attendee-icon {
+  flex: 0 0 2.5rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem 2rem;
+  padding: 3.5rem 1rem;
+  text-align: center;
+  background-color: #02050b;
+  border-top: 1px solid rgba(0, 199, 253, 0.25);
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-copyright {
+  color: #d8e0eb;
+}
+
+.footer-link {
+  color: #00c7fd;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid #00c7fd;
+  outline-offset: 3px;
+}
+
+/* ---------- Mobile ---------- */
 @media (max-width: 768px) {
-  .hero {
-    padding: 35px 20px;
+  .hero,
+  .hero-content {
+    min-height: 0;
   }
-  .hero h1 {
-    font-size: 38px;
+
+  .hero-content {
+    padding: 3rem 1.25rem 7rem;
   }
+
   .container {
-    padding: 32px;
-    margin: 0 15px 30px;
+    padding: 1.25rem;
   }
 
-  .form-group {
-    flex-direction: column;
+  .check-in {
+    padding: 1.25rem;
   }
 
-  input,
-  button {
-    width: 100%;
-  }
-
-  button {
-    height: 50px;
-  }
-
+  /* Stack the form fields */
+  .form-group,
   .input-wrapper {
     flex-direction: column;
   }
 
+  input,
+  select,
+  button {
+    width: 100%;
+  }
+
+  /* Stack the team cards */
   .teams-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .team-card:hover {
+    transform: none;
+  }
+
+  .attendee-card {
+    padding: 0.75rem;
+    gap: 8px;
+  }
+
+  .attendee-icon {
+    flex-basis: 2rem;
+    font-size: 1.5rem;
+  }
+
+  #greeting.celebration-message {
+    padding: 1.75rem 1rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .title-main {
+    font-size: 1.8rem;
+  }
+}
+
+/* Turn off motion for people who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+  .intel-logo,
+  .hero h1,
+  .hero-text,
+  .scroll-indicator,
+  .scroll-line,
+  .team-card,
+  .progress-bar {
+    animation: none;
+    transition: none;
   }
 }
